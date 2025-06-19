@@ -1,8 +1,8 @@
-// app.js  – minimaler Express-Server (CommonJS)
+// app.js
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;   // Koyeb setzt PORT automatisch
+const PORT = process.env.PORT || 3000;   // ← wichtig!
 
 app.get('/', (_, res) => res.json({ msg: 'Hello World 🎉' }));
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.listen(PORT, () => console.log('listening on', PORT));
